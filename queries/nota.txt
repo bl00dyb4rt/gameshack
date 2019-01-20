@@ -1,0 +1,19 @@
+npm install
+npm install vue-barcode
+npm install vue-select
+
+composer require barryvdh/laravel-dompdf
+	config/app/ --> Barryvdh\DomPDF\ServiceProvider::class,
+			'PDF' => Barryvdh\DomPDF\Facade::class,
+
+
+
+npm install --save laravel-echo pusher-js
+	resources/assets/bootstrap.js --> descomentar laravel-echo
+	reemplazar el key, cluster y secret. En el archivo .env tambien.
+
+composer require pusher/pusher-php-server
+
+php artisan notifications:table
+php artisan make:notification
+
