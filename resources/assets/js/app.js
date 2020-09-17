@@ -33,22 +33,22 @@ const app = new Vue({
     data :{
         menu : 0,
         notifications: [],
-        ruta: 'http://sistema-ventas.test'
+        ruta: 'http://3.128.2.180:8080'
     },
     created() {
-        let me = this;     
+        let me = this;
         axios.post(this.ruta+'/notification/get').then(function(response) {
            //console.log(response.data);
-           me.notifications=response.data;    
+           me.notifications=response.data;
         }).catch(function(error) {
             console.log(error);
         });
 
         var userId = $('meta[name="userId"]').attr('content');
-        
+
         Echo.private('App.User.' + userId).notification((notification) => {
-             me.notifications.unshift(notification); 
-        }); 
-        
-    }  
+             me.notifications.unshift(notification);
+        });
+
+    }
 });
