@@ -12848,7 +12848,7 @@ var app = new Vue({
     data: {
         menu: 0,
         notifications: [],
-        ruta: 'http://3.128.2.180:8080'
+        ruta: 'https://test.elblogdebart.com'
     },
     created: function created() {
         var me = this;
