@@ -14,7 +14,7 @@ class CreateDetalleVentasTable extends Migration
     public function up()
     {
         Schema::create('detalle_ventas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->integer('idventa')->unsigned();
             $table->foreign('idventa')->references('id')->on('ventas')->onDelete('cascade');
             $table->integer('idarticulo')->unsigned();

@@ -14,7 +14,7 @@ class CreateIngresosTable extends Migration
     public function up()
     {
         Schema::create('ingresos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->Bigincrements('id');
             $table->integer('idproveedor')->unsigned();
             $table->foreign('idproveedor')->references('id')->on('proveedores');
             $table->integer('idusuario')->unsigned();

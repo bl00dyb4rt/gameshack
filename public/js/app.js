@@ -12848,7 +12848,7 @@ var app = new Vue({
     data: {
         menu: 0,
         notifications: [],
-        ruta: 'https://test.elblogdebart.com'
+        ruta: 'http://127.0.0.1:8000'
     },
     created: function created() {
         var me = this;
@@ -58535,7 +58535,7 @@ var content = __webpack_require__(62);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("29c0b732", content, false, {});
+var update = __webpack_require__(4)("3aed04c7", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -59676,7 +59676,7 @@ var content = __webpack_require__(68);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("58c7bd3b", content, false, {});
+var update = __webpack_require__(4)("639cd0db", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -63766,7 +63766,7 @@ var content = __webpack_require__(109);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("ccd03600", content, false, {});
+var update = __webpack_require__(4)("47fc4540", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -64296,7 +64296,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-search" }),
-                      _vm._v("Buscar\r\n                                    ")
+                      _vm._v("Buscar\n                                    ")
                     ]
                   )
                 ])
@@ -64316,7 +64316,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "zmdi zmdi-plus" }),
-                    _vm._v("Añadir\r\n                                ")
+                    _vm._v("Añadir\n                                ")
                   ]
                 )
               ])
@@ -64999,7 +64999,7 @@ var content = __webpack_require__(114);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("4a0d26e7", content, false, {});
+var update = __webpack_require__(4)("cc4af172", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -65561,7 +65561,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-search" }),
-                      _vm._v("Buscar\r\n                                ")
+                      _vm._v("Buscar\n                                ")
                     ]
                   )
                 ])
@@ -65585,7 +65585,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "zmdi zmdi-plus" }),
-                    _vm._v("Añadir\r\n                            ")
+                    _vm._v("Añadir\n                            ")
                   ]
                 )
               ])
@@ -66351,7 +66351,7 @@ var content = __webpack_require__(119);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("d9fc0350", content, false, {});
+var update = __webpack_require__(4)("c211b290", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -66668,7 +66668,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-search" }),
-                      _vm._v("Buscar\r\n                                ")
+                      _vm._v("Buscar\n                                ")
                     ]
                   )
                 ])
@@ -66904,7 +66904,7 @@ var content = __webpack_require__(124);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("7736f8f1", content, false, {});
+var update = __webpack_require__(4)("2c3246de", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -67574,7 +67574,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-search" }),
-                      _vm._v("Buscar\r\n                                    ")
+                      _vm._v("Buscar\n                                    ")
                     ]
                   )
                 ])
@@ -67594,7 +67594,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "zmdi zmdi-plus" }),
-                    _vm._v("Añadir\r\n                                ")
+                    _vm._v("Añadir\n                                ")
                   ]
                 )
               ])
@@ -68468,7 +68468,7 @@ var content = __webpack_require__(129);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("1138bcea", content, false, {});
+var update = __webpack_require__(4)("39cd99eb", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -69270,7 +69270,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
 
-            //Obtener los datos de los detalles
+            //Obtener los datos de los detalles 
             var urld = this.ruta + '/ingreso/obtenerDetalles?id=' + id;
 
             axios.get(urld).then(function (response) {
@@ -69475,7 +69475,7 @@ var render = function() {
                             [
                               _c("i", { staticClass: "fa fa-search" }),
                               _vm._v(
-                                "Buscar\r\n                                    "
+                                "Buscar\n                                    "
                               )
                             ]
                           )
@@ -69496,7 +69496,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "zmdi zmdi-plus" }),
-                            _vm._v("Añadir\r\n                                ")
+                            _vm._v("Añadir\n                                ")
                           ]
                         )
                       ])
@@ -70234,7 +70234,7 @@ var render = function() {
                                 [
                                   _c("i", { staticClass: "fa fa-plus" }),
                                   _vm._v(
-                                    " Agregar articulo\r\n                                            "
+                                    " Agregar articulo\n                                            "
                                   )
                                 ]
                               )
@@ -70565,7 +70565,7 @@ var render = function() {
                           [
                             _c("i", { staticClass: "fa fa-save" }),
                             _vm._v(
-                              " Registrar Compra\r\n                                "
+                              " Registrar Compra\n                                "
                             )
                           ]
                         ),
@@ -70583,9 +70583,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fa fa-ban" }),
-                            _vm._v(
-                              " Cerrar\r\n                                "
-                            )
+                            _vm._v(" Cerrar\n                                ")
                           ]
                         )
                       ])
@@ -71014,9 +71012,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fa fa-ban" }),
-                            _vm._v(
-                              " Cerrar\r\n                                "
-                            )
+                            _vm._v(" Cerrar\n                                ")
                           ]
                         )
                       ])
@@ -71169,7 +71165,7 @@ var render = function() {
                             [
                               _c("i", { staticClass: "fa fa-search" }),
                               _vm._v(
-                                "Buscar\r\n                                        "
+                                "Buscar\n                                        "
                               )
                             ]
                           )
@@ -71411,7 +71407,7 @@ var staticRenderFns = [
     return _c("tr", [
       _c("td", { attrs: { colspan: "5" } }, [
         _vm._v(
-          "\r\n                                                                NO hay artículos agregados\r\n                                                            "
+          "\n                                                                NO hay artículos agregados\n                                                            "
         )
       ])
     ])
@@ -71488,7 +71484,7 @@ var staticRenderFns = [
     return _c("tr", [
       _c("td", { attrs: { colspan: "5" } }, [
         _vm._v(
-          "\r\n                                                                NO hay artículos agregados\r\n                                                            "
+          "\n                                                                NO hay artículos agregados\n                                                            "
         )
       ])
     ])
@@ -71609,7 +71605,7 @@ var content = __webpack_require__(134);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("8e17ea6c", content, false, {});
+var update = __webpack_require__(4)("c77ec9ac", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -72418,7 +72414,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
 
-            //Obtener los datos de los detalles
+            //Obtener los datos de los detalles 
             var urld = this.ruta + '/venta/obtenerDetalles?id=' + id;
 
             axios.get(urld).then(function (response) {
@@ -72624,7 +72620,7 @@ var render = function() {
                             [
                               _c("i", { staticClass: "fa fa-search" }),
                               _vm._v(
-                                "Buscar\r\n                                    "
+                                "Buscar\n                                    "
                               )
                             ]
                           )
@@ -72645,7 +72641,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "zmdi zmdi-plus" }),
-                            _vm._v("Añadir\r\n                                ")
+                            _vm._v("Añadir\n                                ")
                           ]
                         )
                       ])
@@ -73416,7 +73412,7 @@ var render = function() {
                                 [
                                   _c("i", { staticClass: "fa fa-plus" }),
                                   _vm._v(
-                                    " Agregar articulo\r\n                                            "
+                                    " Agregar articulo\n                                            "
                                   )
                                 ]
                               )
@@ -73750,7 +73746,7 @@ var render = function() {
                           [
                             _c("i", { staticClass: "fa fa-save" }),
                             _vm._v(
-                              " Registrar Venta\r\n                                "
+                              " Registrar Venta\n                                "
                             )
                           ]
                         ),
@@ -73768,9 +73764,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fa fa-ban" }),
-                            _vm._v(
-                              " Cerrar\r\n                                "
-                            )
+                            _vm._v(" Cerrar\n                                ")
                           ]
                         )
                       ])
@@ -74199,9 +74193,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fa fa-ban" }),
-                            _vm._v(
-                              " Cerrar\r\n                                "
-                            )
+                            _vm._v(" Cerrar\n                                ")
                           ]
                         )
                       ])
@@ -74354,7 +74346,7 @@ var render = function() {
                             [
                               _c("i", { staticClass: "fa fa-search" }),
                               _vm._v(
-                                "Buscar\r\n                                        "
+                                "Buscar\n                                        "
                               )
                             ]
                           )
@@ -74596,7 +74588,7 @@ var staticRenderFns = [
     return _c("tr", [
       _c("td", { attrs: { colspan: "5" } }, [
         _vm._v(
-          "\r\n                                                                NO hay artículos agregados\r\n                                                            "
+          "\n                                                                NO hay artículos agregados\n                                                            "
         )
       ])
     ])
@@ -74673,7 +74665,7 @@ var staticRenderFns = [
     return _c("tr", [
       _c("td", { attrs: { colspan: "5" } }, [
         _vm._v(
-          "\r\n                                                                NO hay artículos agregados\r\n                                                            "
+          "\n                                                                NO hay artículos agregados\n                                                            "
         )
       ])
     ])
@@ -75269,14 +75261,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         if (this.notifications == '') {
             return this.arrayNotifications = [];
         } else {
-            //Capturo la ultima notificación agregada
+            //Capturo la ultima notificación agregada 
             this.arrayNotifications = Object.values(this.notifications[0]);
             //Validación por indice fuera de rango
             if (this.arrayNotifications.length > 3) {
-                //Si el tamaño es > 3 Es cuando las notificaciones son obtenidas desde el mismo servidor, es decir por la consulta con AXIOS
+                //Si el tamaño es > 3 Es cuando las notificaciones son obtenidas desde el mismo servidor, es decir por la consulta con AXIOS 
                 return Object.values(this.arrayNotifications[4]);
             } else {
-                //Si el tamaño es < 3 Es cuando las notificaciones son obtenidas desde el canal privado, es decir mediante Laravel Echo y Pusher
+                //Si el tamaño es < 3 Es cuando las notificaciones son obtenidas desde el canal privado, es decir mediante Laravel Echo y Pusher 
                 return Object.values(this.arrayNotifications[0]);
             }
         }

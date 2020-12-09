@@ -33,7 +33,7 @@ const app = new Vue({
     data :{
         menu : 0,
         notifications: [],
-        ruta: 'https://test.elblogdebart.com'
+        ruta: 'http://127.0.0.1:8000'
     },
     created() {
         let me = this;

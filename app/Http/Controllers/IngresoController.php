@@ -18,7 +18,7 @@ class IngresoController extends Controller
 
         $buscar = $request->buscar;
         $criterio = $request->criterio;
-        
+
         if ($buscar==''){
             $ingresos = Ingreso::join('personas','ingresos.idproveedor','=','personas.id')
             ->join('users','ingresos.idusuario','=','users.id')
@@ -35,7 +35,7 @@ class IngresoController extends Controller
             'ingresos.estado','personas.nombre','users.usuario')
             ->where('ingresos.'.$criterio, 'like', '%'. $buscar . '%')->orderBy('ingresos.id', 'desc')->paginate(3);
         }
-        
+
         return [
             'pagination' => [
                 'total'        => $ingresos->total(),
@@ -59,7 +59,7 @@ class IngresoController extends Controller
         'ingresos.estado','personas.nombre','users.usuario')
         ->where('ingresos.id','=',$id)
         ->orderBy('ingresos.id', 'desc')->take(1)->get();
-        
+
         return ['ingreso' => $ingreso];
     }
     public function obtenerDetalles(Request $request){
@@ -70,12 +70,13 @@ class IngresoController extends Controller
         ->select('detalle_ingresos.cantidad','detalle_ingresos.precio','articulos.nombre as articulo')
         ->where('detalle_ingresos.idingreso','=',$id)
         ->orderBy('detalle_ingresos.id', 'desc')->get();
-        
+
         return ['detalles' => $detalles];
     }
 
     public function store(Request $request)
     {
+
         if (!$request->ajax()) return redirect('/');
 
         try{
@@ -104,32 +105,34 @@ class IngresoController extends Controller
                 $detalle->idingreso = $ingreso->id;
                 $detalle->idarticulo = $det['idarticulo'];
                 $detalle->cantidad = $det['cantidad'];
-                $detalle->precio = $det['precio'];          
+                $detalle->precio = $det['precio'];
                 $detalle->save();
-            }          
+            }
 
             $fechaActual= date('Y-m-d');
-            $numVentas = DB::table('ventas')->whereDate('created_at', $fechaActual)->count(); 
-            $numIngresos = DB::table('ingresos')->whereDate('created_at',$fechaActual)->count(); 
+            $numVentas = DB::table('ventas')->whereDate('created_at', $fechaActual)->count();
+            $numIngresos = DB::table('ingresos')->whereDate('created_at',$fechaActual)->count();
 
-            $arregloDatos = [ 
-            'ventas' => [ 
-                        'numero' => $numVentas, 
-                        'msj' => 'Ventas' 
-                    ], 
-            'ingresos' => [ 
-                        'numero' => $numIngresos, 
-                        'msj' => 'Ingresos' 
-                    ] 
-            ];                
+            $arregloDatos = [
+            'ventas' => [
+                        'numero' => $numVentas,
+                        'msj' => 'Ventas'
+                    ],
+            'ingresos' => [
+                        'numero' => $numIngresos,
+                        'msj' => 'Ingresos'
+                    ]
+            ];
             $allUsers = User::all();
 
-            foreach ($allUsers as $notificar) { 
-                User::findOrFail($notificar->id)->notify(new NotifyAdmin($arregloDatos)); 
-            }  
+            foreach ($allUsers as $notificar) {
+                User::findOrFail($notificar->id)->notify(new NotifyAdmin($arregloDatos));
+            }
 
             DB::commit();
         } catch (Exception $e){
+
+
             DB::rollBack();
         }
     }
