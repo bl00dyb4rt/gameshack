@@ -12848,7 +12848,7 @@ var app = new Vue({
     data: {
         menu: 0,
         notifications: [],
-        ruta: 'http://127.0.0.1:8000'
+        ruta: 'https://test.elblogdebart.com'
     },
     created: function created() {
         var me = this;
@@ -69270,7 +69270,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
 
-            //Obtener los datos de los detalles 
+            //Obtener los datos de los detalles
             var urld = this.ruta + '/ingreso/obtenerDetalles?id=' + id;
 
             axios.get(urld).then(function (response) {
@@ -75261,14 +75261,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         if (this.notifications == '') {
             return this.arrayNotifications = [];
         } else {
-            //Capturo la ultima notificación agregada 
+            //Capturo la ultima notificación agregada
             this.arrayNotifications = Object.values(this.notifications[0]);
             //Validación por indice fuera de rango
             if (this.arrayNotifications.length > 3) {
-                //Si el tamaño es > 3 Es cuando las notificaciones son obtenidas desde el mismo servidor, es decir por la consulta con AXIOS 
+                //Si el tamaño es > 3 Es cuando las notificaciones son obtenidas desde el mismo servidor, es decir por la consulta con AXIOS
                 return Object.values(this.arrayNotifications[4]);
             } else {
-                //Si el tamaño es < 3 Es cuando las notificaciones son obtenidas desde el canal privado, es decir mediante Laravel Echo y Pusher 
+                //Si el tamaño es < 3 Es cuando las notificaciones son obtenidas desde el canal privado, es decir mediante Laravel Echo y Pusher
                 return Object.values(this.arrayNotifications[0]);
             }
         }
