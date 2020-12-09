@@ -68,7 +68,7 @@
                                         <div v-else>
                                             <span class="status--denied">Desactivado</span>
                                         </div>
-                                        
+
                                     </td>
                                     <td style="text-align: center;">
                                         <div class="table-data-feature">
@@ -144,8 +144,8 @@
                                 <div class="col-12 col-md-9">
                                     <input type="text" id="codigo" class="form-control" v-model="codigo">
                                     <barcode :value="codigo" :options="{ format: 'EAN-13' }">
-                                    Generando código de barras.    
-                                    </barcode>   
+                                    Generando código de barras.
+                                    </barcode>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -153,7 +153,7 @@
                                     <label for="nombre" class=" form-control-label">Nombre</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="nombre" class="form-control" v-model="nombre">  
+                                    <input type="text" id="nombre" class="form-control" v-model="nombre">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -161,7 +161,7 @@
                                     <label for="precio" class=" form-control-label">Precio Venta</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="precio" class="form-control" v-model="precio_venta">  
+                                    <input type="text" id="precio" class="form-control" v-model="precio_venta">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -169,7 +169,7 @@
                                     <label for="stock" class=" form-control-label">Stock</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="stock" class="form-control" v-model="stock">  
+                                    <input type="text" id="stock" class="form-control" v-model="stock">
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -177,7 +177,7 @@
                                     <label for="descripcion" class=" form-control-label">Descripción</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="descripcion" class="form-control" v-model="descripcion">  
+                                    <input type="text" id="descripcion" class="form-control" v-model="descripcion">
                                 </div>
                             </div>
                             <div v-show="errorArticulo" class="row form-group div-error">
@@ -200,7 +200,7 @@
     </div>
     <!-- end modal large -->
     </main>
-    
+
 </template>
 
 <script>
@@ -249,23 +249,23 @@
                 if(!this.pagination.to) {
                     return [];
                 }
-                
-                var from = this.pagination.current_page - this.offset; 
+
+                var from = this.pagination.current_page - this.offset;
                 if(from < 1) {
                     from = 1;
                 }
 
-                var to = from + (this.offset * 2); 
+                var to = from + (this.offset * 2);
                 if(to >= this.pagination.last_page){
                     to = this.pagination.last_page;
-                }  
+                }
 
                 var pagesArray = [];
                 while(from <= to) {
                     pagesArray.push(from);
                     from++;
                 }
-                return pagesArray;             
+                return pagesArray;
 
             }
         },
@@ -308,7 +308,7 @@
                 if (this.validarArticulo()){
                     return;
                 }
-                
+
                 let me = this;
 
                 axios.post(this.ruta+'/articulo/registrar',{
@@ -329,7 +329,7 @@
                if (this.validarArticulo()){
                     return;
                 }
-                
+
                 let me = this;
 
                 axios.put(this.ruta+'/articulo/actualizar',{
@@ -345,7 +345,7 @@
                     me.listarArticulo(1,'','nombre');
                 }).catch(function (error) {
                     console.log(error);
-                }); 
+                });
             },
             desactivarArticulo(id){
                swal({
@@ -376,15 +376,15 @@
                     }).catch(function (error) {
                         console.log(error);
                     });
-                    
-                    
+
+
                 } else if (
                     // Read more about handling dismissals
                     result.dismiss === swal.DismissReason.cancel
                 ) {
-                    
+
                 }
-                }) 
+                })
             },
             activarArticulo(id){
                swal({
@@ -415,15 +415,15 @@
                     }).catch(function (error) {
                         console.log(error);
                     });
-                    
-                    
+
+
                 } else if (
                     // Read more about handling dismissals
                     result.dismiss === swal.DismissReason.cancel
                 ) {
-                    
+
                 }
-                }) 
+                })
             },
             validarArticulo(){
                 this.errorArticulo=0;
@@ -495,7 +495,7 @@
         }
     }
 </script>
-<style>    
+<style>
     .modal-content{
         width: 100% !important;
         position: absolute !important;

@@ -221,7 +221,7 @@
                                                                 NO hay artículos agregados
                                                             </td>
                                                         </tr>
-                                                    </tbody> 
+                                                    </tbody>
                                                     <tfoot>
                                                         <tr style="background-color: #CEECF5;">
                                                             <td colspan="4" align="right"><strong>Total Parcial:</strong></td>
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </template>
             <template v-else-if="listado==2">
                 <div class="row">
@@ -329,7 +329,7 @@
                                                                 NO hay artículos agregados
                                                             </td>
                                                         </tr>
-                                                    </tbody> 
+                                                    </tbody>
                                                     <tfoot>
                                                         <tr style="background-color: #CEECF5;">
                                                             <td colspan="3" align="right"><strong>Total Parcial:</strong></td>
@@ -357,7 +357,7 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </template>
         </div>
     </section>
@@ -417,7 +417,7 @@
                                                     <div v-else>
                                                         <span class="status--denied">Desactivado</span>
                                                     </div>
-                                                    
+
                                                 </td>
                                                 <td style="text-align: center;">
                                                     <div class="table-data-feature">
@@ -432,8 +432,8 @@
                                     </table>
                                 </div>
                             </div>
-                            
-                            
+
+
                         </div>
                     </div>
                 <div class="modal-footer">
@@ -508,16 +508,16 @@
                 if(!this.pagination.to) {
                     return [];
                 }
-                
-                var from = this.pagination.current_page - this.offset; 
+
+                var from = this.pagination.current_page - this.offset;
                 if(from < 1) {
                     from = 1;
                 }
 
-                var to = from + (this.offset * 2); 
+                var to = from + (this.offset * 2);
                 if(to >= this.pagination.last_page){
                     to = this.pagination.last_page;
-                }  
+                }
 
                 var pagesArray = [];
                 while(from <= to) {
@@ -548,7 +548,7 @@
                 });
             },
             pdfVenta(id){
-                window.open('venta/pdf/'+id+','+'_blank');
+                window.open('venta/pdf/'+id);
             },
             selectCliente(){
                 let me=this;
@@ -625,7 +625,7 @@
                             title: 'Error...',
                             text: 'NO hay stock disponible!',
                             })
-                       } 
+                       }
                        else{
                            me.arrayDetalle.push({
                                 idarticulo: me.idarticulo,
@@ -644,10 +644,10 @@
                             me.stock=0
                        }
                     }
-                    
+
                 }
 
-                
+
 
             },
             agregarDetalleModal(data =[]){
@@ -667,7 +667,7 @@
                             precio: data['precio_venta'],
                             descuento:0,
                             stock:data['stock']
-                        }); 
+                        });
                     }
             },
             listarArticulo (buscar,criterio){
@@ -685,7 +685,7 @@
                 if (this.validarVenta()){
                     return;
                 }
-                
+
                 let me = this;
 
                 axios.post(this.ruta+'/venta/registrar',{
@@ -714,7 +714,7 @@
                     me.codigo='';
                     me.descuento=0;
                     me.arrayDetalle=[];
-                    window.open('venta/pdf/'+response.data.id+','+'_blank');
+                    window.open('venta/pdf/'+response.data.id);
 
                 }).catch(function (error) {
                     console.log(error);
@@ -725,7 +725,7 @@
                 me.errorVenta=0;
                 me.errorMostrarMsjVenta =[];
                 var art;
-                
+
                 me.arrayDetalle.map(function(x){
                     if (x.cantidad>x.stock){
                         art=x.articulo + " con stock insuficiente";
@@ -765,11 +765,11 @@
             verVenta(id){
                 let me=this;
                 me.listado=2;
-                
+
                 //Obtener los datos del ingreso
                 var arrayVentaT=[];
                 var url= this.ruta+'/venta/obtenerCabecera?id=' + id;
-                
+
                 axios.get(url).then(function (response) {
                     var respuesta= response.data;
                     arrayVentaT = respuesta.venta;
@@ -785,9 +785,9 @@
                     console.log(error);
                 });
 
-                //Obtener los datos de los detalles 
+                //Obtener los datos de los detalles
                 var urld= this.ruta+'/venta/obtenerDetalles?id=' + id;
-                
+
                 axios.get(urld).then(function (response) {
                     console.log(response);
                     var respuesta= response.data;
@@ -795,13 +795,13 @@
                 })
                 .catch(function (error) {
                     console.log(error);
-                });               
+                });
             },
             cerrarModal(){
                 this.modal=0;
                 this.tituloModal='';
-            }, 
-            abrirModal(){               
+            },
+            abrirModal(){
                 this.arrayArticulo=[];
                 this.modal = 1;
                 this.tituloModal = 'Seleccione uno o varios artículos';
@@ -835,15 +835,15 @@
                     }).catch(function (error) {
                         console.log(error);
                     });
-                    
-                    
+
+
                 } else if (
                     // Read more about handling dismissals
                     result.dismiss === swal.DismissReason.cancel
                 ) {
-                    
+
                 }
-                }) 
+                })
             },
         },
         mounted() {
@@ -852,7 +852,7 @@
         }
     }
 </script>
-<style>    
+<style>
     .modal-content{
         width: 100% !important;
         position: absolute !important;

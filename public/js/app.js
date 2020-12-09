@@ -63386,7 +63386,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                                Generando código de barras.    \n                                "
+                                  "\n                                Generando código de barras.\n                                "
                                 )
                               ]
                             )
@@ -72192,7 +72192,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         pdfVenta: function pdfVenta(id) {
-            window.open('venta/pdf/' + id + ',' + '_blank');
+            window.open('venta/pdf/' + id);
         },
         selectCliente: function selectCliente() {
             var me = this;
@@ -72345,7 +72345,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 me.codigo = '';
                 me.descuento = 0;
                 me.arrayDetalle = [];
-                window.open('venta/pdf/' + response.data.id + ',' + '_blank');
+                window.open('venta/pdf/' + response.data.id);
             }).catch(function (error) {
                 console.log(error);
             });
@@ -72414,7 +72414,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 console.log(error);
             });
 
-            //Obtener los datos de los detalles 
+            //Obtener los datos de los detalles
             var urld = this.ruta + '/venta/obtenerDetalles?id=' + id;
 
             axios.get(urld).then(function (response) {
