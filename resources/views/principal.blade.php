@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="userId" content="{{ Auth::check() ? Auth::user()->id : ''}}">  
+    <meta name="userId" content="{{ Auth::check() ? Auth::user()->id : ''}}">
     <title>Sistema de ventas</title>
     <link rel="shortcut icon" href="images/icon/logo-mini.png">
     <link href="{{asset('css/public.css')}}" rel="stylesheet" media="all">
@@ -32,7 +32,7 @@
             @endif
         @endif
 
-        
+
 
         <!-- PAGE CONTENT-->
         <div class="page-content--bgf7">
@@ -46,7 +46,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © Brahua 2018. All rights reserved.</p>
+                                <p>Copyright © Gameshack 2020. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
